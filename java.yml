@@ -4,11 +4,11 @@
   tasks:
   - name: install java7 on redhat
     yum:
-      name: java-1.7.0-openjdk-devel
+      name: "{{ javaversion7_redhat }}"
       state: present
     when: ansible_os_family =="RedHat"
   - name: install java7 on ubuntu
     apt:
-      name: openjdk-7-jdk
+      name: "{{ javaversion7_ubuntu }}"
       state: present
     when: ansible_os_family =="Debian"
