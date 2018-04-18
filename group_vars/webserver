@@ -1,2 +1,2 @@
-javaversion7_redhat =java-1.7.0-openjdk-devel
-javaversion7_ubuntu =openjdk-7-jdk
+javaversion7_redhat ="java-1.7.0-openjdk-devel"
+javaversion7_ubuntu ="openjdk-7-jdk"
