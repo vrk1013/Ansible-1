@@ -1,0 +1,14 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: install java7 on redhat
+    yum:
+      name: java-1.7.0-openjdk-devel
+      state: present
+    when: ansible_os_family =="RedHat"
+  - name: install java7 on ubuntu
+    apt:
+      name: openjdk-7-jdk
+      state: present
+    when: ansible_os_family =="Debian"
