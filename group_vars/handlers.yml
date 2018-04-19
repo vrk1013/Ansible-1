@@ -1,0 +1,29 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: install  httpd pakg on redhat
+    yum:
+      name: httpd
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: start the httpd service
+    service:
+      name: httpd
+      state: restarted
+      enabled: yes
+    when: ansible_os_family =="RedHat"
+
+  - name: install  apache2  pakg on ubuntu
+    apt:
+      name: apache2
+      state: present
+    when: ansible_os_family =="Debian"
+
+  - name: start the apache2 service
+    service:
+      name: apache2
+      state: restarted
+      enabled: yes
+    when: ansible_os_family =="Debian"
