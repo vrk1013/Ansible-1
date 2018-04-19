@@ -2,6 +2,7 @@
 - hosts: webserver
   become: yes
   tasks:
+  - include_tasks: innclude.yml
   - name: install  httpd pakg on redhat
     yum:
       name: httpd
