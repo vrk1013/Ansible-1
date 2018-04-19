@@ -1,8 +1,10 @@
 ---
 - hosts: webserver
   become: yes
+  vars:
+    javatext: install java7 on redaht
   tasks:
-  - name: install java7 on redhat
+  - name: "{{javatext}}"
     yum:
       name: "{{ javaversion7_redhat }}"
       state: present
