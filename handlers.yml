@@ -20,7 +20,7 @@
   - name: deploy the index.html page in all ubuntu webserver
     template:
       src: indexhtml.j2
-      dest: /var/www/html/inddex.html
+      dest: /var/www/html/index.html
   
   handlers:
   - name: httpdservice
