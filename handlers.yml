@@ -9,13 +9,18 @@
       state: present
     notify: httpdservice
     when: ansible_os_family =="RedHat"
- 
+
   - name: install  apache2  pakg on ubuntu
     apt:
       name: apache2
       state: present
     notify: apache2service
     when: ansible_os_family =="Debian"
+  
+  - name: deploy the index.html page in all ubuntu webserver
+    template:
+      src: indexhtml.j2
+      dest: /var/www/html/inddex.html
   
   handlers:
   - name: httpdservice
