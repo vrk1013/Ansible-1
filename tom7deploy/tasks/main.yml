@@ -5,7 +5,6 @@
   file:
     path: /usr/share/tomcat/webapps/{{ item }}
     state: absent
-   
   with_items:
     - SKRlogin
     - SKRlogin.war
