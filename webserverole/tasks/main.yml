@@ -10,5 +10,5 @@
 - name:  copy the file from ansible server to all nodes
   template:
     src: templates/index.j2
-    dest: /var/wwww/html/index.html
+    dest: /var/www/html/index.html
   
