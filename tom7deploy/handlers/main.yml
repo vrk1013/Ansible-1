@@ -1,6 +1,6 @@
 ---
 # handlers file for tom7deploy
-- name: restarttomcatd
+- name: rstarttom
   service:
     name: tomcat
     state: restarted
