@@ -2,6 +2,6 @@
 - hosts: redhat
   become: yes
   roles:
-    - tom7install
+    - {role: tom7install, when: ansible_os_family =="RedHat"}
     - tom7deploy
   
