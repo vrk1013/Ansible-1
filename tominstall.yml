@@ -1,0 +1,6 @@
+---
+- hosts: redhat
+  become: yes
+  roles:
+    - tom7install
+  
