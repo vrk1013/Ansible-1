@@ -3,3 +3,4 @@
 httpdpakg: httpd
 dbusername: maha
 dbpasswd: maha432
+port: 3066
