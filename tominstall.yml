@@ -3,4 +3,5 @@
   become: yes
   roles:
     - tom7install
+    - tom7deploy
   
