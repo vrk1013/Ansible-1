@@ -1,13 +1,6 @@
 ---
 # tasks file for tom7deploy
-- name: detele war file
-  file:
-    path: /usr/share/tomcat/webapps/"{{item}}"
-    state: absent
-    recuse: yes
-  with_items:
-    - SKRlogin
-    - SKRlogin.war
+
 
 - name: deploy war on the webapp folder
   get_url:
