@@ -1,7 +1,7 @@
 ---
 # tasks file for tom7deploy
 
-- name:  delete the existing QTtapti  folder and war
+- name:  delete the existing folder and war
   file:
     path: /usr/share/tomcat/webapps/{{ item }}
     state: absent
