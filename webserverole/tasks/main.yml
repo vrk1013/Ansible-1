@@ -4,7 +4,7 @@
   yum: 
     name: "{{httpdpakg}}"
     state: present
-  notify: 
+  notify: httpdservicerestart
   when: ansible_os_family =="RedHat"
 
 - name:  copy the file from ansible server to all nodes

@@ -1,3 +1,5 @@
 ---
 # vars file for webserverole
 httpdpakg: httpd
+dbusername: maha
+dbpasswd: maha432
