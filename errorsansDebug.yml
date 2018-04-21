@@ -1,8 +1,10 @@
 ---
-- hosts: webserver
+- hosts: redhat
   become: yes
   tasks:
   - name: install git
+    #command: hostname -f
+    #tags
     yum:
       name: git
       state: present
@@ -11,18 +13,11 @@
   - name: display the result of git
     debug:
       msg: "{{gitresult}}"
-    when: ansible_os_family =="RedHat"
- 
-  - name: install tree
-    yum:
-      name: treee
-      state: present
-    ignore_errors: yes
-    when: ansible_os_family =="RedHat"
-  - name: install wget
-    yum:
-      name: wget
-      state: present
-    when: ansible_os_family =="RedHat"
+  - name: display the result of git
+    debug:
+      msg: "{{gitresult.stdout}}"
+  - name: display the result of git
+    debug:
+      msg: "{{gitresult.stderr}}" 
 
   
