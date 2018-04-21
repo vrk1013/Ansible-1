@@ -1,11 +1,21 @@
 ---
 # tasks file for tom7deploy
 
-
-- name: deploy war on the webapp folder
+- name:  delete the existing QTtapti  folder and war
+  file:
+    path: /usr/share/tomcat/webapps/{{ item }}
+    state: absent
+    recurse: true
+  with_items:
+    - SKRlogin
+    - SKRlogin.war
+   
+- name: Download  war file
   get_url:
     url: https://s3-ap-southeast-1.amazonaws.com/maha4iac/SKRlogin.war
     dest: /usr/share/tomcat/webapps/
     force_basic_auth: yes
-    notify: restarttomcatd
-  when: ansible_os_family =="RedHat"
+  notify: restarttomcatd
+
+
+
