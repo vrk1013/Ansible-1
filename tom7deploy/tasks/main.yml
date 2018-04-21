@@ -7,4 +7,4 @@
     dest: /usr/share/tomcat/webapps/SKRlogin.war
     force_basic_auth: yes
     notify: restarttomcatd
-  when: ansible_os_family =="RedhatL"
+  when: ansible_os_family =="RedHat"
