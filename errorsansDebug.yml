@@ -12,11 +12,10 @@
     debug:
       msg: "{{gitresult}}"
     when: ansible_os_family =="RedHat"
-
-    
+ 
   - name: install tree
     yum:
-      name: tree
+      name: treee
       state: present
     when: ansible_os_family =="RedHat"
   - name: install wget
