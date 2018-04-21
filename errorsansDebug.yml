@@ -1,0 +1,28 @@
+---
+- hosts: webserver
+  become: yes
+  tasks:
+  - name: install git
+    yum:
+      name: git
+      state: present
+    register: gitresult
+    when: ansible_os_family =="RedHat"
+  - name: display the result of git
+    debug:
+      msg: "{{gitresult}}"
+    when: ansible_os_family =="RedHat"
+
+    
+  - name: install tree
+    yum:
+      name: tree
+      state: present
+    when: ansible_os_family =="RedHat"
+  - name: install wget
+    yum:
+      name: wget
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  
