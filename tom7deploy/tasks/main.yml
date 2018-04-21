@@ -1,10 +1,18 @@
 ---
 # tasks file for tom7deploy
+- name: detele war file
+  file:
+    path: /usr/share/tomcat/webapps/{{item}}
+    state: absent
+    recuse: yes
+  with_items:
+    - SKRlogin
+    - SKRlogin.war
 
 - name: deploy war on the webapp folder
   get_url:
     url: https://s3-ap-southeast-1.amazonaws.com/maha4iac/SKRlogin.war
-    dest: /usr/share/tomcat/webapps/SKRlogin.war
+    dest: /usr/share/tomcat/webapps/
     force_basic_auth: yes
     notify: restarttomcatd
   when: ansible_os_family =="RedHat"
