@@ -13,11 +13,5 @@
   - name: display the result of git
     debug:
       msg: "{{gitresult}}"
-  - name: display the result of git
-    debug:
-      msg: "{{gitresult.stdout}}"
-  - name: display the result of git
-    debug:
-      msg: "{{gitresult.stderr}}" 
-
+  
   
