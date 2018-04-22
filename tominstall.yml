@@ -3,5 +3,6 @@
   become: yes
   roles:
     - {role: tom7install, when: ansible_os_family =="RedHat"}
-    - tom7deploy
+    - {role: tom7deploy, when: ansible_os_family =="RedHat"}
+
   

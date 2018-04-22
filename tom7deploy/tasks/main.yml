@@ -8,6 +8,7 @@
   with_items:
     - SKRlogin
     - SKRlogin.war
+  when: ansible_os_family =="RedHat"
    
 - name: Download  war file
   get_url:
@@ -15,6 +16,7 @@
     dest: /usr/share/tomcat/webapps/
     force_basic_auth: yes
   notify: rstarttom
+  when: ansible_os_family =="RedHat"
 
 
 
