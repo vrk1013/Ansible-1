@@ -3,11 +3,8 @@
   become: yes
   tasks:
   - name: install git
-    #command: hostname -f
+    command: hostname -f
     #tags
-    apt:
-      name: git
-      state: present
     register: gitresult
     when: ansible_os_family =="Debian"
   - name: display the result of git
