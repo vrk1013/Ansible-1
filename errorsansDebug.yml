@@ -1,12 +1,12 @@
 ---
-- hosts: ubuntu
+- hosts: redhat
   become: yes
   tasks:
   - name: install git
     command: hostname -f
     #tags
     register: gitresult
-    when: ansible_os_family =="Debian"
+    when: ansible_os_family =="RedHat"
   - name: display the result of git
     debug:
       msg: "{{gitresult}}"
