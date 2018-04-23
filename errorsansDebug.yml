@@ -10,5 +10,5 @@
   - name: display the result of git
     debug:
       msg: "{{gitresult}}"
-  
+    when: gitresult.stderr ==""
   
