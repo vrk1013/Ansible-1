@@ -12,7 +12,7 @@
    
 - name: Download  war file
   get_url:
-    url: https://s3-ap-southeast-1.amazonaws.com/maha4iac/SKRlogin.war
+    url: /var/lib/jenkins/workspace/SKRloing/target/SKRLogin-1.0.war
     dest: /usr/share/tomcat/webapps/
     force_basic_auth: yes
   notify: rstarttom
