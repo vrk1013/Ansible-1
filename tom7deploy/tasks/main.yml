@@ -17,8 +17,6 @@
     force_basic_auth: yes
   notify: rstarttom
   when: ansible_os_family =="RedHat"
-- name: Download  war file
+- name: display the result of git
   debug:
-    msg: "{{mahatesta}}""
-
-
+    msg: "{{mahatesta}}"
