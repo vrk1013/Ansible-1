@@ -3,7 +3,12 @@
   become: yes
   tasks:
   - name: install git on all nodes
-    yum:
+    apt:
       name: git
       state: present
+  - name: install tree
+    apt:
+      name: tree
+      state: present
+
       
