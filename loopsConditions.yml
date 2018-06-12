@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: redhat
   become: yes
   gather_facts: yes
   tasks:
