@@ -1,0 +1,15 @@
+---
+- hosts: webserveres
+  become: yes
+  tasks:
+  - name: install java on ubuntu.
+    apt:
+      name: openjdk-6-jre
+      state: present
+    when: ansible_os_family =="Debian"
+    
+  - name: install java on redhat
+    yum:
+      name: java-1.6.0-openjdk
+      state: present
+    when: ansible_os_family =="RedHat"
