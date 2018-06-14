@@ -1,0 +1,13 @@
+---
+- hosts: Appserver
+  become: yes
+  tasks:
+  - name: check host name
+    command: hostname -f
+    register: myresult
+
+  - name: see the myresult
+    debug:
+      msg:  "{{ myresult }}"
+
+    
