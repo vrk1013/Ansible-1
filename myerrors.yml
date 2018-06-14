@@ -6,17 +6,20 @@
     yum:
       name: gitt
       state: present
-    ignore_errors: yes
+    #ignore_errors: yes
     when: ansible_os_family =="RedHat"
+    tags: mygit
 
   - name: install wget on rehhat
     yum:
       name: wget
       state: present
     when: ansible_os_family =="RedHat"
+    tags: mywget
 
   - name: install tree on rehhat
     yum:
       name: tree
       state: present
     when: ansible_os_family =="RedHat"
+    tags: mytree
