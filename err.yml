@@ -9,7 +9,7 @@
   - name: install basic software for devlopments for redhat
     yum:
       name: "{{ item }}"
-    with_items:
+    with_itemss:
       - git
       - tree
       - wget
