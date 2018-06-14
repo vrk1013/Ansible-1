@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install git on rehhat
+    yum:
+      name: gitt
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: install wget on rehhat
+    yum:
+      name: wget
+      state: present
+    when: ansible_os_family =="RedHat"
+
+  - name: install tree on rehhat
+    yum:
+      name: tree
+      state: present
+    when: ansible_os_family =="RedHat"
