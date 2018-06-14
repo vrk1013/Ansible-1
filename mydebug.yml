@@ -20,6 +20,6 @@
     yum:
       name: git
       state: present
-    when: myresult.stderr ==!""
+    when: myresult.stderr =!""
 
     
