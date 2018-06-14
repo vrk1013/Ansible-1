@@ -4,9 +4,9 @@
   tasks:
   - name: install git on rehhat
     yum:
-      name: gitt
-      state: present
-    #ignore_errors: yes
+      name: git
+      statee: present
+    ignore_errors: yes
     when: ansible_os_family =="RedHat"
     tags: mygit
 
