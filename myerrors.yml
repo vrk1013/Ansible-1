@@ -6,6 +6,7 @@
     yum:
       name: gitt
       state: present
+    ignore_errors: yes
     when: ansible_os_family =="RedHat"
 
   - name: install wget on rehhat
