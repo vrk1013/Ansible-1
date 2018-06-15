@@ -9,6 +9,10 @@
       state: present
     notify: myhttpdservicesstart
     when: ansible_os_family =="RedHat"
+  - name: index file copy from master to  all nodes.
+    template:
+      src: myidex.j2
+      dest: /var/www/html/index.html
 
   handlers:
   - name: myhttpdservicesstart
