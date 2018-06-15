@@ -9,5 +9,5 @@
 [localhost]
 localhost
 
-[webserver]
-172.31.27.98
+[appserver]
+172.31.22.238
