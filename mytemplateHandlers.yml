@@ -1,0 +1,19 @@
+---
+- hosts: webserveres
+  become: yes
+  tasks:
+  - include_tasks: myfile.yml
+  - name: install webserver 
+    yum:
+      name: httpd
+      state: present
+    notify: myhttpdservicesstart
+    when: ansible_os_family =="RedHat"
+
+  handlers:
+  - name: myhttpdservicesstart
+    service:
+      name: httpd
+      state: restarted
+
+
