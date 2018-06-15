@@ -13,6 +13,7 @@
     template:
       src: myidex.j2
       dest: /var/www/html/index.html
+    when: ansible_os_family =="RedHat"
 
   handlers:
   - name: myhttpdservicesstart
