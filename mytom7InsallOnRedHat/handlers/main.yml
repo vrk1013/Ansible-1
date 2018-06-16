@@ -1,6 +1,6 @@
 ---
 # handlers file for mytom7InsallOnRedHat
-- name: starttomcat
+- name: restarttomcat
   service:
     name: tomcat
-    stat: started
+    stat: restarted
